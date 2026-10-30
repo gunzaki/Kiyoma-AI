@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Kiyoma chat bubble mark">
+  <defs><linearGradient id="bubble" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c9bdff"/><stop offset="1" stop-color="#8d78ed"/></linearGradient><linearGradient id="spark" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b9f2d6"/><stop offset="1" stop-color="#78d9b2"/></linearGradient></defs>
+  <path d="M78 31h103c24 0 44 20 44 44v78c0 24-20 44-44 44h-71l-44 33 11-34c-25-4-43-22-43-43V75c0-24 20-44 44-44z" fill="url(#bubble)"/>
+  <path d="M78 78h25v37l37-37h34l-46 49 49 61h-35l-39-48v48H78z" fill="#171326"/>
+  <path d="M190 28l6 15 15 6-15 6-6 15-6-15-15-6 15-6z" fill="url(#spark)"/>
+</svg>
