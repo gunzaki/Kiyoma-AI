@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#10131b" />
+  <meta name="description" content="Kiyoma is your private AI companion. Chat on your phone, even offline." />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./icons/kiyoma-192.png" type="image/png" />
+  <title>Kiyoma — Your AI Companion</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><img class="brand-mark" src="./kiyoma-mark.svg" alt="" /><div><strong>Kiyoma</strong><small>YOUR AI COMPANION</small></div></div>
+      <button id="install" class="install-button" hidden>Install app</button>
+    </header>
+    <section class="chat-area" aria-label="Chat with Kiyoma">
+      <div id="welcome" class="welcome">
+        <div class="welcome-orb">✦</div>
+        <p class="eyebrow">A LITTLE HELP, WHEN YOU NEED IT</p>
+        <h1>Hi, I’m <em>Kiyoma.</em></h1>
+        <p class="intro">Your private AI companion, ready to help you think, learn, and create.</p>
+        <div class="suggestions">
+          <button data-prompt="Explain a difficult IT topic in clear, simple steps."><span>✳</span><b>Learn something</b><small>Get a clear, step-by-step explanation</small></button>
+          <button data-prompt="Help me brainstorm a small project I can build."><span>◇</span><b>Explore an idea</b><small>Turn a thought into a project</small></button>
+          <button data-prompt="Help me make a simple plan for today."><span>☷</span><b>Make a plan</b><small>Choose a few useful next steps</small></button>
+        </div>
+      </div>
+      <div id="messages" class="messages" aria-live="polite"></div>
+    </section>
+    <section class="setup" id="setup" aria-label="AI setup">
+      <div class="status-line"><span id="dot" class="dot"></span><span id="status">Set up Kiyoma once while connected to Wi-Fi.</span></div>
+      <div class="progress-track" id="progress-track" hidden><div id="progress-bar"></div></div>
+      <div class="model-row"><label for="model-select">Response speed</label><select id="model-select" aria-label="Choose AI model"><option value="Qwen3.5-0.8B-q4f16_1-MLC">Quick · lighter model</option><option value="Qwen3.5-2B-q4f16_1-MLC">More capable · may respond slower</option></select></div>
+      <div class="actions"><button id="load-model" class="primary">Set up Kiyoma</button><button id="clear-chat" class="quiet">Clear chat</button></div>
+      <p class="privacy">The first setup downloads the model. After that, replies run on your phone and can work offline.</p>
+    </section>
+    <form id="chat-form" class="composer">
+      <textarea id="prompt" rows="1" placeholder="Set up Kiyoma to start chatting…" aria-label="Message Kiyoma" disabled></textarea>
+      <button id="send" type="submit" aria-label="Send message" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+    </form>
+    <footer><span id="connection">Checking connection…</span><span>On-device AI · Private by design</span></footer>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
